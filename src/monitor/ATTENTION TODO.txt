@@ -1,0 +1,12 @@
+TODO :
+
+ - As was done for router, generlise metric use and remove hard coding (LATENCY_METRIC and BW_METRIC)
+ - a single iperf server is launched with each probe, currently it accepts one test at a time so other tests have to wait for their turn
+ - monitoring packet is UDP --> what happens if lost. Is sending several packets sufficient ?
+ - Maybe track monitoring packets and detect if back to origin or not within time frame.
+ - Optimize code and use threads when possible especially when launching bw tests with iperf. Currently each probe can launch one test at a time.
+ - in iperf tests : weird behaviour when activating oammit durations (test sometimes doesnt stop or has weird behaviour)
+ - iperf problem : sometimes after a while test duration is not respected and test keeps going beyond limit. investigate : maybe related to null results in iperf
+ - when a test fails (timeout), 0 bw is returned, is this to be adopted ? if several packets are launched for the same test then maybe neglect failed ones.
+ - Fine tune iperf test parameters (currently test duration of 2s)
+ - Verify timeouts

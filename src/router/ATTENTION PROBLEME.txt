@@ -1,0 +1,25 @@
+#######################
+      PROBLEME
+#######################
+
+Pour pouvoir bien fonctionner exp3 et rnn ont besoin d'initialiser des variables pour chaqune de leur destination.
+
+Pour EXP3 :
+    std::map < IPPath , size_t > allPathsId;
+    std::map < IPv4Address , std::vector< double > > allPathsWeigths;
+    std::map < IPv4Address , std::vector< double > > allPathsProba
+
+Pour RNN :
+    map<IPv4Address,vector<Neuron>> neuron;
+
+Dans le fonctionement actuelle ces variables sont initialisés lors de la premiere mesure. 
+Cepandant des nouvelles destination peuvent s'ajouter dans index_destination au bout de plusieurs mesures. 
+Dans ce cas, les variables pour cette destination ne sont pas initialisés et donc l'aogorithme va cesser de fonctioner.
+
+
+######################
+      SOLUTION
+######################
+
+Il faudrait mettre en place une fonction qui verifie a chaque mesure si de nouvelles destinations sont arrivées et si oui faire 
+l'initialisation des variables pour ces destinations.

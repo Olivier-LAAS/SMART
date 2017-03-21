@@ -1,0 +1,12 @@
+# Name of your program
+package "monitor" 
+# Version of your program
+version "1.1" 
+#Purpose of your program
+purpose "This program corresponds to the monitor agent of SMART Proxy."
+     
+# Options
+option  "router-ip" R "A string indicating the IP address of the router" string yes
+option  "local-ip" L "A string indicating the IP address of the monitor" string yes
+option  "metric" m "A string option, giving the probe mode rtt, bw or loss" string default="rtt"  no
+

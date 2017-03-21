@@ -1,0 +1,17 @@
+# Name of your program
+package "router" 
+# Version of your program
+version "1.1" 
+#Purpose of your program
+purpose "This program corresponds to the routing agent of SMART Proxy."
+     
+# Options
+option  "cu-ip" C "A string indicating the IP address of the CU" string yes
+option  "number-paths" K "An integer option giving the number of paths to test at each measurement epoch" int yes
+option  "role" r "An integer option, giving the role of the router" int yes
+option  "algorithm" a "A string option, giving the algorithm used for learning optimal routes. It can be 'rnn' or 'exp3' (default)" string default="exp3" yes
+option  "file" f "A string option, giving the name of the file for simulation mode." string no 
+option  "metric" m "A string option, giving the probe mode 'rtt' (default), 'bw' or 'loss'." string default="rtt"  no
+option  "probe-timeout" - "An integer option giving the time in sec for probe measurement (default 10s)" int default="10" no 
+option  "probe-period" - "An integer option giving the time in sec between probe measurement (default 30s)" int default="30" no
+

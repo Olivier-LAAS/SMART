@@ -1,0 +1,7 @@
+To generate the Makefile, run :
+
+	cmake ../
+
+To compile :
+
+	make
